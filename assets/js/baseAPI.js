@@ -5,4 +5,10 @@ $.ajaxPrefilter((options) => {
   // console.log(options)
   // 在请求之前拼接上根路径
   options.url = 'http://www.liulongbin.top:3007' + options.url
+  // 注入 token
+  if (options.url.includes('/my/')) {
+    options.headers = {
+      Authorization: localStorage.getItem('token'),
+    }
+  }
 })

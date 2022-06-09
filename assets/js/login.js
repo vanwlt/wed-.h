@@ -60,7 +60,7 @@ $(function () {
         // 1.要把token存在本地
         localStorage.setItem('token', res.token)
         //2.跳转到首页
-        localStorage.href = '/index.html'
+        location.href = '/index.html'
       },
     })
   })
