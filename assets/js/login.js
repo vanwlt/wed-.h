@@ -30,7 +30,7 @@ $(function () {
     // 发起注册请求
     $.ajax({
       type: 'POST',
-      url: baseUrl + '/api/reguser',
+      url: '/api/reguser',
       data: {
         username: $('#form_reg [name=username]').val(),
         password: $('#form_reg [name=password]').val(),
